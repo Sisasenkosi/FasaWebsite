@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <title>FASASmartech</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Tailwind Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/creativetimofficial/tailwind-starter-kit/compiled-tailwind.min.css"
+    />
+    <!--Link to  css-->
+    <link rel="stylesheet" href="/index.css" />
+  </head>
+  <body class="text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav
+      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg"
+    >
+      <div
+        class="container px-0 mx-auto flex flex-wrap items-center justify-between"
+      >
+        <!-- Nav Left Side -->
+        <div
+          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
+        >
+          <svg width="300" height="100" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="red" stop-opacity="1" />
+                <stop offset="100%" stop-color="#ADD8E6" stop-opacity="1" />
+              </linearGradient>
+            </defs>
+            <text
+              x="50%"
+              y="50%"
+              font-family="Arial, sans-serif"
+              font-size="40"
+              fill="url(#gradient)"
+              text-anchor="middle"
+              dominant-baseline="middle"
+            >
+              FASASmartech
+            </text>
+          </svg>
+          <!-- Hamburger Button (Mobile) -->
+          <button
+            id="menu-toggle"
+            class="lg:hidden text-2xl focus:outline-none text-white"
+          >
+            <i class="text-white fas fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Navigation Links (Desktop) -->
+        <div class="hidden lg:flex p-4">
+          <ul
+            class="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-8"
+          >
+            <li class="px-4">
+              <a
+                href="#about"
+                class="relative text-blue-600 font-medium transition duration-300 hover:text-blue-800 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                About Us
+              </a>
+            </li>
+            <li class="px-4">
+              <a
+                href="#services"
+                class="relative text-blue-600 font-medium transition duration-300 hover:text-blue-800 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                Services
+              </a>
+            </li>
+            <li class="px-4">
+              <a
+                href="#contact"
+                class="relative text-blue-600 font-medium transition duration-300 hover:text-blue-800 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full"
+              >
+                Contact
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div
+          id="mobile-menu"
+          class="hidden mobile-menu fixed inset-0 bg-opacity-30 flex flex-col items-start w-full h-full text-white z-50 px-0"
+        >
+          <!-- Close Button (Top-Left) -->
+          <div class="relative top-6 left-6">
+            <button
+              id="close-menu"
+              class="text-3xl text-white bg-gray-900 bg-opacity-50 px-4 py-2 rounded-full hover:bg-gray-700 transition"
+            >
+              X
+            </button>
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="w-full text-center">
+            <ul class="scroll flex flex-col mt3-2">
+              <li class="mb-8">
+                <a
+                  href="#about"
+                  class="text-2xl font-semibold hover:text-gray-300 transition"
+                  >About</a
+                >
+              </li>
+              <li class="mb-8">
+                <a
+                  href="#services"
+                  class="text-2xl font-semibold hover:text-gray-300 transition"
+                  onclick="scrollAndHide(event)"
+                  >Services</a
+                >
+              </li>
+              <li class="mb-8">
+                <a
+                  href="#contact"
+                  class="text-2xl font-semibold hover:text-gray-300 transition"
+                  onclick="scrollAndHide(event)"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- End of Navigation -->
+
+    <!-- Splash Page -->
+    <main>
+      <div
+        class="relative pt-16 pb-32 flex content-center items-center justify-center"
+        style="min-height: 75vh"
+      >
+        <!-- Background Image -->
+        <div
+          class="absolute top-0 w-full h-full bg-center bg-contain"
+          style="
+            background-image: url('bg2.jpg');
+            background-size: contain;
+            background-position: center;
+            height: 100vh;
+          "
+        >
+          <!-- Overlay -->
+          <span
+            id="blackOverlay"
+            class="w-full h-full absolute opacity-75 bg-black"
+          ></span>
+        </div>
+        <!-- Text Over Main Background -->
+        <div class="container relative mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+              <div class="pr-12">
+                <h1 class="text-white mt-12 font-semibold text-5xl">
+                  Your trusted partner
+                </h1>
+                <p
+                  class="mt-4 text-4xl font-extrabold text-gray-200 tracking-wide leading-snug text-center drop-shadow-lg"
+                >
+                  in cutting-edge IT solutions, pioneering industry
+                  transformation through innovation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Making Polygon Shape in Background -->
+        <div
+          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+          style="height: 70px; transform: translateZ(0)"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-blue-100 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+      </div>
+      <!-- End of Splash Page -->
+
+      <!-- Services Section -->
+      <section id="services" class="pb-20 bg-gray-300 -mt-24">
+        <!-- 3 Card Section -->
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <!-- Card -->
+            <div
+              class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
+              data-aos="zoom-in-up"
+              data-aos-delay="1000"
+            >
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                  >
+                    <!-- Icon -->
+                    <i class="fas fa-robot"></i>
+                  </div>
+                  <!-- Text Box -->
+                  <h6 class="text-xl font-semibold">IT & Software Solutions</h6>
+                  <ul
+                    class="mt-2 mb-4 text-gray-500 space-y-1 list-disc list-inside"
+                  >
+                    <li class="text-sm">Custom Software Development</li>
+                    <li class="text-sm">IT Consulting & Support</li>
+                    <li class="text-sm">AI-Driven Appl Development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div
+              class="w-full md:w-4/12 px-4 text-center"
+              data-aos="zoom-in-down"
+              data-aos-delay="1100"
+            >
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"
+                  >
+                    <!-- Icon -->
+                    <i class="fas fa-atom"></i>
+                  </div>
+                  <!-- Text Box -->
+                  <h6 class="text-xl font-semibold">Electronics & Hardware</h6>
+                  <ul
+                    class="mt-2 mb-4 text-gray-500 space-y-1 list-disc list-inside"
+                  >
+                    <li class="text-sm">
+                      Electronics Product Design & Manufacture
+                    </li>
+                    <li class="text-sm">Embedded Systems Development</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- Card -->
+            <div
+              class="pt-6 w-full md:w-4/12 px-4 text-center"
+              data-aos="zoom-in-left"
+              data-aos-delay="1200"
+            >
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
+              >
+                <div class="px-4 py-5 flex-auto">
+                  <div
+                    class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                  >
+                    <!-- Icon -->
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </div>
+                  <!-- Text Box -->
+                  <h6 class="text-xl font-semibold">Training & Support</h6>
+                  <ul
+                    class="mt-2 mb-4 text-gray-500 space-y-1 list-disc list-inside"
+                  >
+                    <li class="text-sm">Technical Consultation</li>
+                    <li class="text-sm">Software Training</li>
+                    <li class="text-sm">Cybersecurity Services</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Box and Card Container -->
+
+          <div id="about" class="flex flex-wrap items-center mt-32" bg-blue-800>
+            <!-- Text Box Container -->
+            <div
+              class="w-full md:w-5/12 px-4 mr-auto ml-auto"
+              data-aos="zoom-in-left"
+            >
+              <!-- Text Box -->
+              <div
+                class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bgnd"
+              >
+                <!-- Icon -->
+                <i class="fas fa-star text-xl"></i>
+              </div>
+              <h3 class="text-3xl mb-2 font-semibold leading-normal">
+                About Us
+              </h3>
+              <p
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+              >
+                We are FASASmartech, your trusted partner in cutting-edge IT
+                solutions, software development, and electronics innovation.
+                Whether you need custom-built software, expert IT support, or
+                high-quality electronics procurement and design, we’ve got you
+                covered.
+              </p>
+
+              <p
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+              >
+                With a commitment to excellence and innovation, we provide
+                tailored technology solutions to help businesses streamline
+                operations, enhance efficiency, and stay ahead in a
+                fast-evolving digital world.
+              </p>
+              <p
+                class="text-lg font-bold leading-relaxed mt-0 mb-4 text-gray-700"
+              >
+                Let’s build the future—together.
+              </p>
+            </div>
+
+            <!-- Image Cap & Text Card -->
+            <div
+              class="w-full md:w-4/12 px-4 mr-auto ml-auto"
+              data-aos="flip-left"
+              data-aos-delay="800"
+            >
+              <div
+                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-orange-500"
+              >
+                <!-- Image -->
+                <img
+                  alt="..."
+                  src="bg3.jpg"
+                  class="w-full align-middle rounded-t-lg h-28 md:h-38 lg:h-54"
+                />
+                <blockquote class="relative p-8 mb-4">
+                  <!-- Making Polygon Shape in Card -->
+                  <svg
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 583 95"
+                    class="absolute left-0 w-full block"
+                    style="height: 95px; top: -94px"
+                  >
+                    <polygon
+                      points="-30,95 583,95 583,65"
+                      class="text-orange-500 fill-current"
+                    ></polygon>
+                  </svg>
+                  <!-- Text Box -->
+                  <h4 class="text-xl font-bold text-white">
+                    Smart Tech, Smarter Future.
+                  </h4>
+                  <p class="text-md font-light mt-2 text-white">
+                    We redefine industries with groundbreaking technology and
+                    innovation. Reliable, innovative, and built for success—FASA
+                    powers your world.
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Services Section -->
+
+      <!-- About Section -->
+      <section class="relative py-20">
+        <!-- Making Polygon Shape in Background -->
+        <div
+          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+          style="height: 80px; transform: translateZ(0)"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-white fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <!-- Section Container -->
+        <div class="container mx-auto px-4">
+          <div class="items-center">
+            <!-- Text Box Container-->
+            <div
+              class="w-full md:w-5/12 ml-auto mr-auto px-4"
+              data-aos="zoom-in-right"
+            >
+              <div class="md:pr-12">
+                <div
+                  class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
+                >
+                  <!-- Icon -->
+                  <i class="fas fa-rocket text-xl"></i>
+                </div>
+                <!-- Text Box -->
+                <h3 class="text-3xl font-semibold">Why choose us?</h3>
+                <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                  We provide remarkable services and produce:
+                </p>
+                <!-- List -->
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                        >
+                          <!-- Icon -->
+                          <i class="fas fa-fingerprint"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">
+                          Carefully crafted solutions
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                        >
+                          <!-- Icon -->
+                          <i class="fab fa-html5"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">Innovative Technology</h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                        >
+                          <!-- Icon -->
+                          <i class="far fa-paper-plane"></i>
+                        </span>
+                      </div>
+                      <div>
+                        <h4 class="text-gray-600">
+                          Track record of delivering measurable success
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of About Section -->
+
+      <!-- Contact Section -->
+      <section class="pb-20 relative block bg-gray-900">
+        <!-- Making Polygon Shape in Background -->
+        <div
+          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+          style="height: 80px; transform: translateZ(0)"
+        >
+          <svg
+            class="absolute bottom-0 overflow-hidden"
+            xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="none"
+            version="1.1"
+            viewBox="0 0 2560 100"
+            x="0"
+            y="0"
+          >
+            <polygon
+              class="text-gray-900 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <!-- Section Container -->
+        <div class="container mx-auto px-4 lg:pt-24 lg:pb-64">
+          <!-- Text Box -->
+          <div id="services" class="flex flex-wrap text-center justify-center">
+            <div class="w-full lg:w-6/12 px-4">
+              <h2 class="text-4xl font-semibold text-white">Services</h2>
+              <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+                Our services are built to solve real-world challenges with
+                smart, scalable, and reliable technology.
+              </p>
+            </div>
+          </div>
+          <!-- Flex Row Container -->
+          <div class="flex flex-wrap mt-12 justify-center">
+            <!-- Item -->
+            <div class="w-full lg:w-3/12 px-4 text-center" data-aos="fade-left">
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <!-- Icon -->
+                <i class="fas fa-medal text-xl"></i>
+              </div>
+              <!-- Text Box -->
+              <h5 class="text-xl mt-5 font-semibold text-white">
+                IT & Software Solutions
+              </h5>
+              <p class="mt-2 mb-4 text-gray-500">
+                We develop custom software and offer cybersecurity services.
+              </p>
+            </div>
+            <!-- Item -->
+            <div
+              class="w-full lg:w-3/12 px-4 text-center"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <!-- Icon -->
+                <i class="fas fa-poll text-xl"></i>
+              </div>
+              <!-- Text Box -->
+              <h5 class="text-xl mt-5 font-semibold text-white">
+                Electronics & Hardware
+              </h5>
+
+              <p class="mt-2 mb-4 text-gray-500">
+                We design, manufacture and procure electronic components.
+              </p>
+            </div>
+            <!-- Item -->
+            <div
+              class="w-full lg:w-3/12 px-4 text-center"
+              data-aos="fade-left"
+              data-aos-delay="600"
+            >
+              <div
+                class="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center"
+              >
+                <!-- Icon -->
+                <i class="fas fa-lightbulb text-xl"></i>
+              </div>
+              <!-- Text Box -->
+              <h5 class="text-xl mt-5 font-semibold text-white">
+                Training & Support
+              </h5>
+              <p class="mt-2 mb-4 text-gray-500">
+                We offer support and maintenance services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Contact Form -->
+      <section
+        id="contact"
+        class="relative block py-24 lg:pt-0 bg-lightBlue-900"
+        data-aos="fade-in-up"
+      >
+        <!-- Container -->
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
+            <div class="w-full lg:w-6/12 px-4">
+              <div
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
+              >
+                <div class="flex-auto p-5 lg:p-10">
+                  <h4 class="text-2xl font-semibold">Want to work with us?</h4>
+                  <p class="leading-relaxed mt-1 mb-4 text-gray-600">
+                    Complete this form and we will get back to you in 24 hours.
+                  </p>
+                  <!-- Name -->
+                  <form
+                    action="https://getform.io/f/bvrwropb"
+                    method="POST"
+                    class="w-full max-w-lg mx-auto p-6 rounded-lg shadow-md"
+                  >
+                    <label
+                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      for="full-name"
+                    >
+                      Full Name
+                    </label>
+                    <input
+                      name="name"
+                      type="text"
+                      placeholder="Full Name"
+                      class="w-full px-4 py-3 mb-4 text-gray-700 placeholder-gray-400 bg-white rounded-md shadow focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    />
+
+                    <label
+                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      for="email"
+                    >
+                      Email
+                    </label>
+                    <input
+                      name="email"
+                      type="email"
+                      placeholder="Email"
+                      class="w-full px-4 py-3 mb-4 text-gray-700 placeholder-gray-400 bg-white rounded-md shadow focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    />
+
+                    <label
+                      class="block uppercase text-gray-700 text-xs font-bold mb-2"
+                      for="message"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      rows="4"
+                      placeholder="Type a message..."
+                      class="w-full px-4 py-3 mb-4 text-gray-700 placeholder-gray-400 bg-white rounded-md shadow focus:outline-none focus:ring-2 focus:ring-gray-600"
+                    ></textarea>
+
+                    <button
+                      type="submit"
+                      class="w-full bg-gray-900 text-white font-bold uppercase px-6 py-3 rounded-md shadow hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600 transition-all"
+                    >
+                      Send Message
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End of Contact Section -->
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="relative bg-gray-300 pt-8 pb-6">
+      <!-- Making Polygon Shape in Background -->
+      <div
+        class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+        style="height: 80px; transform: translateZ(0)"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
+        >
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
+      </div>
+      <!-- Section Container -->
+      <div class="container px-4 items-center justify-center">
+        <!-- Text Box Container -->
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+
+            <div class="mt-4 text-gray-500 text-sm space-y-2">
+              <p>
+                <strong>📅 Working Hours:</strong> Monday – Friday: 9:00 AM –
+                6:00 PM
+              </p>
+              <p>
+                <strong>📧 Email:</strong>
+                <a
+                  href="mailto:fasasmartechnology@gmail.com"
+                  class="text-blue-500 hover:underline"
+                >
+                  fasasmartechnology@gmail.com
+                </a>
+              </p>
+              <p>
+                <strong>📞 Call Us:</strong>
+                <a
+                  href="tel:+263771416796"
+                  class="text-blue-500 hover:underline"
+                >
+                  +263771416796
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Line Break -->
+        <hr class="my-6 border-gray-400" />
+        <!-- Footer Text -->
+        <div
+          class="flex flex-wrap items-center md:justify-between justify-center"
+        >
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-sm text-gray-600 font-semibold py-1">
+              Copyright © 2025 FASASmartech
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer Section -->
+  </body>
+
+  <!-- AOS FOR JS lets get aos from where it lives -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Initialising the AOS FOR JS(LIBRARY THAT ALLOWS ANIMATION) -->
+  <script src="aos.js"></script>
+
+  <!-- Navigation Script -->
+  <script src="navbar.js"></script>
+</html>

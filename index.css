@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.mobile-menu {
+  background: linear-gradient(to bottom, #444648, #cddff4);
+}
+
+.scroll {
+  padding-top: 160px;
+}
+
+.bgnd {
+  background-color: #acbeef;
+}
