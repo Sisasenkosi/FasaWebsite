@@ -70,7 +70,7 @@
             <li class="px-4">
               <a
                 href="#about"
-                class="relative text-blue-600 font-medium transition duration-300 hover:text-blue-800 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full"
+                class="relative text-blue-600 text-xl font-medium transition duration-300 hover:text-white after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-transform after:duration-300 hover:after:w-full hover:after:translate-x-1"
               >
                 About Us
               </a>
@@ -78,7 +78,7 @@
             <li class="px-4">
               <a
                 href="#services"
-                class="relative text-blue-600 font-medium transition duration-300 hover:text-blue-800 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full"
+                class="relative text-blue-600 text-xl font-medium transition duration-300 hover:text-white after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-transform after:duration-300 hover:after:w-full hover:after:translate-x-1"
               >
                 Services
               </a>
@@ -86,7 +86,7 @@
             <li class="px-4">
               <a
                 href="#contact"
-                class="relative text-blue-600 font-medium transition duration-300 hover:text-blue-800 after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full"
+                class="relative text-blue-600 text-xl font-medium transition duration-300 hover:text-white after:absolute after:left-0 after:bottom-0 after:w-0 after:h-0.5 after:bg-blue-800 after:transition-transform after:duration-300 hover:after:w-full hover:after:translate-x-1"
               >
                 Contact
               </a>
@@ -152,16 +152,17 @@
         <div
           class="absolute top-0 w-full h-full bg-center bg-contain"
           style="
-            background-image: url('bg2.jpg');
+            background-color: #1a2341;
             background-size: contain;
             background-position: center;
-            height: 100vh;
+            height: 400vh;
           "
         >
           <!-- Overlay -->
           <span
             id="blackOverlay"
-            class="w-full h-full absolute opacity-75 bg-black"
+            class="w-full h-full absolute opacity-75"
+            style="background-color: #1a2341"
           ></span>
         </div>
         <!-- Text Over Main Background -->
@@ -173,7 +174,7 @@
                   Your trusted partner
                 </h1>
                 <p
-                  class="mt-4 text-4xl font-extrabold text-gray-200 tracking-wide leading-snug text-center drop-shadow-lg"
+                  class="mt-4 text-2xl font-extrabold text-gray-200 tracking-wide leading-snug text-center drop-shadow-lg"
                 >
                   in cutting-edge IT solutions, pioneering industry
                   transformation through innovation.
@@ -183,30 +184,32 @@
           </div>
         </div>
         <!-- Making Polygon Shape in Background -->
-        <div
-          class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
-          style="height: 70px; transform: translateZ(0)"
+      </div>
+
+      <div
+        class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
+        style="height: 70px; transform: translateZ(0)"
+      >
+        <svg
+          class="absolute bottom-0 overflow-hidden"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+          version="1.1"
+          viewBox="0 0 2560 100"
+          x="0"
+          y="0"
         >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-blue-100 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
+          <polygon
+            class="fill-current"
+            style="fill: #1a2341"
+            points="2560 0 2560 100 0 100"
+          ></polygon>
+        </svg>
       </div>
       <!-- End of Splash Page -->
 
       <!-- Services Section -->
-      <section id="services" class="pb-20 bg-gray-300 -mt-24">
+      <section id="services" class="pb-20 -mt-24">
         <!-- 3 Card Section -->
         <div class="container mx-auto px-4">
           <div class="flex flex-wrap">
@@ -214,7 +217,7 @@
             <div
               class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center"
               data-aos="zoom-in-up"
-              data-aos-delay="1000"
+              data-aos-delay="900"
             >
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
@@ -242,7 +245,7 @@
             <div
               class="w-full md:w-4/12 px-4 text-center"
               data-aos="zoom-in-down"
-              data-aos-delay="1100"
+              data-aos-delay="900"
             >
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
@@ -271,7 +274,7 @@
             <div
               class="pt-6 w-full md:w-4/12 px-4 text-center"
               data-aos="zoom-in-left"
-              data-aos-delay="1200"
+              data-aos-delay="900"
             >
               <div
                 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg"
@@ -299,10 +302,11 @@
 
           <!-- Text Box and Card Container -->
 
-          <div id="about" class="flex flex-wrap items-center mt-32" bg-blue-800>
+          <div id="about" class="flex flex-wrap items-center mt-32">
             <!-- Text Box Container -->
             <div
               class="w-full md:w-5/12 px-4 mr-auto ml-auto"
+              style="fill: #1a2341"
               data-aos="zoom-in-left"
             >
               <!-- Text Box -->
@@ -312,11 +316,11 @@
                 <!-- Icon -->
                 <i class="fas fa-star text-xl"></i>
               </div>
-              <h3 class="text-3xl mb-2 font-semibold leading-normal">
+              <h3 class="text-3xl mb-2 font-semibold text-white leading-normal">
                 About Us
               </h3>
               <p
-                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-100"
               >
                 We are FASASmartech, your trusted partner in cutting-edge IT
                 solutions, software development, and electronics innovation.
@@ -326,7 +330,7 @@
               </p>
 
               <p
-                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700"
+                class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-100"
               >
                 With a commitment to excellence and innovation, we provide
                 tailored technology solutions to help businesses streamline
@@ -334,7 +338,7 @@
                 fast-evolving digital world.
               </p>
               <p
-                class="text-lg font-bold leading-relaxed mt-0 mb-4 text-gray-700"
+                class="text-lg font-bold leading-relaxed mt-0 mb-4 text-gray-100"
               >
                 Let’s build the future—together.
               </p>
@@ -342,12 +346,13 @@
 
             <!-- Image Cap & Text Card -->
             <div
-              class="w-full md:w-4/12 px-4 mr-auto ml-auto"
+              class="w-full md:w-4/12 px-4 py-4 mr-auto ml-auto"
               data-aos="flip-left"
               data-aos-delay="800"
             >
               <div
-                class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-orange-500"
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg"
+                style="background-color: #b10d1d"
               >
                 <!-- Image -->
                 <img
@@ -365,8 +370,9 @@
                     style="height: 95px; top: -94px"
                   >
                     <polygon
-                      points="-30,95 583,95 583,65"
-                      class="text-orange-500 fill-current"
+                      class="fill-current"
+                      style="fill: #b10d1d"
+                      points="2560 0 2560 100 0 100"
                     ></polygon>
                   </svg>
                   <!-- Text Box -->
@@ -389,43 +395,25 @@
       <!-- About Section -->
       <section class="relative py-20">
         <!-- Making Polygon Shape in Background -->
-        <div
-          class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-          style="height: 80px; transform: translateZ(0)"
-        >
-          <svg
-            class="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              class="text-white fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
+
         <!-- Section Container -->
         <div class="container mx-auto px-4">
           <div class="items-center">
             <!-- Text Box Container-->
-            <div
-              class="w-full md:w-5/12 ml-auto mr-auto px-4"
-              data-aos="zoom-in-right"
-            >
+            <div class="w-full md:w-5/12 mx-auto px-4" data-aos="zoom-in-right">
               <div class="md:pr-12">
                 <div
-                  class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-pink-300"
+                  class="text-pink-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full"
+                  style="background-color: #acbeef"
                 >
                   <!-- Icon -->
                   <i class="fas fa-rocket text-xl"></i>
                 </div>
                 <!-- Text Box -->
-                <h3 class="text-3xl font-semibold">Why choose us?</h3>
-                <p class="mt-4 text-lg leading-relaxed text-gray-600">
+                <h3 class="text-3xl font-semibold text-white">
+                  Why choose us?
+                </h3>
+                <p class="mt-4 text-lg leading-relaxed text-gray-500">
                   We provide remarkable services and produce:
                 </p>
                 <!-- List -->
@@ -434,14 +422,15 @@
                     <div class="flex items-center">
                       <div>
                         <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 mr-3"
+                          style="background-color: #acbeef"
                         >
                           <!-- Icon -->
                           <i class="fas fa-fingerprint"></i>
                         </span>
                       </div>
                       <div>
-                        <h4 class="text-gray-600">
+                        <h4 class="text-gray-500">
                           Carefully crafted solutions
                         </h4>
                       </div>
@@ -451,14 +440,15 @@
                     <div class="flex items-center">
                       <div>
                         <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 mr-3"
+                          style="background-color: #acbeef"
                         >
                           <!-- Icon -->
                           <i class="fab fa-html5"></i>
                         </span>
                       </div>
                       <div>
-                        <h4 class="text-gray-600">Innovative Technology</h4>
+                        <h4 class="text-gray-500">Innovative Technology</h4>
                       </div>
                     </div>
                   </li>
@@ -466,14 +456,15 @@
                     <div class="flex items-center">
                       <div>
                         <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 mr-3"
+                          style="background-color: #acbeef"
                         >
                           <!-- Icon -->
                           <i class="far fa-paper-plane"></i>
                         </span>
                       </div>
                       <div>
-                        <h4 class="text-gray-600">
+                        <h4 class="text-gray-500">
                           Track record of delivering measurable success
                         </h4>
                       </div>
@@ -488,7 +479,7 @@
       <!-- End of About Section -->
 
       <!-- Contact Section -->
-      <section class="pb-20 relative block bg-gray-900">
+      <section class="pb-20 relative block" style="background-color: #1a2341">
         <!-- Making Polygon Shape in Background -->
         <div
           class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -504,7 +495,8 @@
             y="0"
           >
             <polygon
-              class="text-gray-900 fill-current"
+              class="fill-current"
+              style="fill: #1a2341"
               points="2560 0 2560 100 0 100"
             ></polygon>
           </svg>
@@ -594,7 +586,9 @@
           <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
             <div class="w-full lg:w-6/12 px-4">
               <div
-                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
+                class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg"
+                style="background-color: #d9ddec"
+                ;
               >
                 <div class="flex-auto p-5 lg:p-10">
                   <h4 class="text-2xl font-semibold">Want to work with us?</h4>
@@ -663,7 +657,7 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="relative bg-gray-300 pt-8 pb-6">
+    <footer class="relative pt-8 pb-6" style="background-color: #1a2341">
       <!-- Making Polygon Shape in Background -->
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -679,19 +673,22 @@
           y="0"
         >
           <polygon
-            class="text-gray-300 fill-current"
+            class="fill-current"
+            style="fill: #1a2341"
             points="2560 0 2560 100 0 100"
           ></polygon>
         </svg>
       </div>
       <!-- Section Container -->
-      <div class="container px-4 items-center justify-center">
+      <div class="container mx-auto px-4 items-center justify-center">
         <!-- Text Box Container -->
         <div
           class="flex flex-wrap items-center md:justify-between justify-center"
         >
           <div class="w-full md:w-4/12 px-4 mx-auto text-center">
-            <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+            <h4 class="text-3xl font-semibold text-white">
+              Let's keep in touch!
+            </h4>
 
             <div class="mt-4 text-gray-500 text-sm space-y-2">
               <p>
